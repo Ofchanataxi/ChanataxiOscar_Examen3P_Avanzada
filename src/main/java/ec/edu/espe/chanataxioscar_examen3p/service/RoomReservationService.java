@@ -38,6 +38,5 @@ public class RoomReservationService {
         RoomReservation saved = roomReservationRepository.save(reservation);
 
         return new RoomReservationResponse(saved.getId(),saved.getRoomCode(), saved.getHours(), saved.getStatus());
-
     }
 }
