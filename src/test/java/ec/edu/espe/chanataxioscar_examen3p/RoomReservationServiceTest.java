@@ -29,12 +29,12 @@ public class RoomReservationServiceTest {
 
     //Creación exitosa de una reserva con datos válidos.
     @Test
-    void testCreateReservation_Success(){
+    void createRoomReservation_validData_shouldSaveAndReturnResponse(){
         //Arrange
         String roomCode = "A101";
         String email = "oscar@espe.edu.ec";
         int hours = 2;
-
+//Oscar Chanataxi
         when(reservationRepository.isReserved(roomCode)).thenReturn(false);
         when(userPolicyClient.isBlocked(email)).thenReturn(false);
         when(roomReservationRepository.save(Mockito.any())).thenAnswer(i -> i.getArguments()[0]);
